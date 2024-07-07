@@ -1,5 +1,5 @@
 import {useContext, useState} from 'react'
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import {FaFire, FaStar, FaSearch} from 'react-icons/fa'
 import {MdAccessTimeFilled} from 'react-icons/md'
@@ -27,6 +27,7 @@ const Header = ({history}) => {
         <Link to="/" className="header-nav-link">
           <h1 className="header-page-name">MovieDB</h1>
         </Link>
+
         <div className="header-desktop-right-container">
           <Link to="/" className="header-nav-link">
             <p className="header-nav-link-text">Popular</p>
@@ -54,6 +55,7 @@ const Header = ({history}) => {
             </button>
           </div>
         </div>
+
         <div className="header-mobile-right-container">
           <Link to="/" className="header-nav-link">
             <FaFire className="nav-link-icons" />
