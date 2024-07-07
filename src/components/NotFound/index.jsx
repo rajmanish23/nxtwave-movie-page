@@ -1,3 +1,5 @@
+import Header from '../Header'
+
 import NotFoundImage from '../../assets/no-results.png'
 
 import './index.css'
