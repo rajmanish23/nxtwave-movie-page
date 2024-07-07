@@ -1,5 +1,8 @@
 import {useContext, useState} from 'react'
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+
+import {FaFire, FaStar, FaSearch} from 'react-icons/fa'
+import {MdAccessTimeFilled} from 'react-icons/md'
 
 import {FaFire, FaStar, FaSearch} from 'react-icons/fa'
 import {MdAccessTimeFilled} from 'react-icons/md'
