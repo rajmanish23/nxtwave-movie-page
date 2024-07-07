@@ -1,0 +1,37 @@
+.not-found-bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: rgb(228, 228, 228);
+  padding: 20px;
+  text-align: center;
+}
+
+.not-found-image {
+  height: 30vh;
+  margin-bottom: 10px;
+}
+
+.not-found-heading {
+  font-size: 25px;
+  margin: 10px 0 10px 0;
+}
+
+.not-found-para {
+  margin: 10px 0 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.not-found-home-link {
+  margin: 8px;
+  padding: 5px 10px 5px 10px;
+  background-color: #1e85da;
+  border-style: none;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+}

@@ -20,7 +20,11 @@ const NotFound = () => (
       </h1>
       <p className="not-found-para">
         Please go back to the
-        <Link className="not-found-home-link">Home page</Link>
+        <Link to="/">
+          <button type="button" className="not-found-home-link">
+            Home page
+          </button>
+        </Link>
         or enter a different URL in the address bar.
       </p>
     </div>
