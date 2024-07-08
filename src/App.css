@@ -6,3 +6,17 @@
   align-items: center;
   font-family: 'Roboto';
 }
+
+.page-list-category-heading {
+  align-self: flex-start;
+}
+
+.page-content-bg-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
