@@ -1,5 +1,5 @@
 import {useContext, useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 import {FaFire, FaStar, FaSearch} from 'react-icons/fa'
 import {MdAccessTimeFilled} from 'react-icons/md'
@@ -75,4 +75,4 @@ const Header = ({history}) => {
   )
 }
 
-export default Header
+export default withRouter(Header)
