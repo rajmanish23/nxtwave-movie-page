@@ -76,41 +76,44 @@ const MovieDetails = ({match}) => {
   )
 
   const renderMovieDetails = () => (
-    <div className="movie-details-bg-container">
-      <div className="movie-details-text-container">
-        <div className="movie-details-top-container">
-          <img
-            className="movie-details-poster"
-            src={posterImage}
-            alt={`Poster for ${movieData.title}`}
-          />
-          <div className="movie-details-top-text-container">
-            <h1 className="movie-details-title-heading">{movieData.title}</h1>
-            <p className="movie-details-rating-para">
-              {`Rating: ${movieData.rating.toFixed(1)}`}
-            </p>
-            <div className="movie-details-sub-details-container">
-              <p className="movie-details-sub-details-text">{`${movieData.runtime} min`}</p>
-              <p className="movie-details-sub-details-text">
-                {movieData.genres.map(eachGenre => `${eachGenre.name}, `)}
+    <>
+      <div className="movie-details-overview-bg-container">
+        <div className="movie-details-text-container">
+          <div className="movie-details-top-container">
+            <img
+              className="movie-details-poster"
+              src={posterImage}
+              alt={`Poster for ${movieData.title}`}
+            />
+            <div className="movie-details-top-text-container">
+              <h1 className="movie-details-title-heading">{movieData.title}</h1>
+              <p className="movie-details-rating-para">
+                {`Rating: ${movieData.rating.toFixed(1)}`}
+              </p>
+              <div className="movie-details-sub-details-container">
+                <p className="movie-details-sub-details-text">{`${movieData.runtime} min`}</p>
+                <p className="movie-details-sub-details-text">
+                  {movieData.genres.map(eachGenre => `${eachGenre.name}, `)}
+                </p>
+              </div>
+              <p className="movie-details-sub-details-para">
+                {`Release Date: ${movieData.releaseDate}`}
               </p>
             </div>
-            <p className="movie-details-sub-details-para">
-              {`Release Date: ${movieData.releaseDate}`}
-            </p>
+          </div>
+          <div className="movie-details-bottom-container">
+            <h1 className="movie-details-overview-heading">Overview</h1>
+            <p className="movie-details-overview-para">{movieData.overview}</p>
           </div>
         </div>
-        <div className="movie-details-bottom-container">
-          <h1 className="movie-details-overview-heading">Overview</h1>
-          <p className="movie-details-overview-para">{movieData.overview}</p>
-        </div>
+        <img
+          className="movie-details-backdrop-image"
+          src={backdropImage}
+          alt={`Backdrop for ${movieData.title}`}
+        />
       </div>
-      <img
-        className="movie-details-backdrop-image"
-        src={backdropImage}
-        alt={`Backdrop for ${movieData.title}`}
-      />
-    </div>
+      <CastList castData={castData} />
+    </>
   )
 
   let viewToRender = null
@@ -132,8 +135,7 @@ const MovieDetails = ({match}) => {
   return (
     <div className="global-bg-container">
       <Header />
-      {viewToRender}
-      <CastList castData={castData} />
+      <div className="movie-details-bg-container">{viewToRender}</div>
     </div>
   )
 }
