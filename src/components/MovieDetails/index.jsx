@@ -135,7 +135,7 @@ const MovieDetails = ({match}) => {
   return (
     <div className="global-bg-container">
       <Header />
-      <div className="movie-details-bg-container">{viewToRender}</div>
+      <div className="page-content-bg-container">{viewToRender}</div>
     </div>
   )
 }
